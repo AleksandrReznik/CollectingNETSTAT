@@ -1,2 +1,2 @@
 # CollectingNETSTAT
-running netstst in loop to collect connections statistics by host and protocol
+Continuosly running netstat to collect connections statistics by host and protocol
