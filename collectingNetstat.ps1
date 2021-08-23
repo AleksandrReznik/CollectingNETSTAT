@@ -1,6 +1,11 @@
+# CollectingNETSTAT.ps1
+#runs NETSTAT in a loop and constantly extracts current connections info putting it to nested hashtables data structure. 
+#After you stop it (by pressing Ctrl+C usually) it shows you statistics on IPs connected to the server (sorted by protocol)
+#Author: Aleksandr Reznik aleksandr@reznik.lt 
+
 param (
     [string]$param_LocalIP, #which local address to monitor for connections
-    [int]$param_numberOfNetstats2run , #Number of netstats to run. if 0 - no limited, should be stopped with Ctrl+c
+    [int]$param_numberOfNetstats2run , #Number of netstats to run. if 0 - not limited, should be stopped with Ctrl+c
     [bool]$param_resolveIPs2FQDNs = $true,
     [bool]$param_collectOnlyEstablished = $true,
     [bool]$param_CreateCSV = $true,
